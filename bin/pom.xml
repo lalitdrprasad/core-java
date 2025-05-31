@@ -6,25 +6,6 @@
 	<artifactId>Core-Java</artifactId>
 	<version>0.1</version>
 	<name>Core Java</name>
-	<properties>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
-	</properties>
-
-	<build>
-		<plugins>
-			<!-- Compiler plugin to specify Java version -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.10.1</version> <!-- Use a recent version -->
-				<configuration>
-					<source>17</source>
-					<target>17</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 
 	<dependencies>
 		<!-- Apache POI - Core library -->

@@ -1,0 +1,4 @@
+Consumer 	void accept(T t) - ifPresent
+Supplier 	T get()- orElseGet
+Function 	R apply(T t)- map
+Predicate   boolean	test(T t)
