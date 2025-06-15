@@ -42,30 +42,16 @@ public class ProducerConsumerExample2 {
 
 		ProducerConsumerExample2 pc = new ProducerConsumerExample2();
 
-		Thread t1 = new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				try {
-					pc.produce();
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-
+		Runnable runnable = () -> {
+			try {
+				pc.produce();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
 			}
-		});
+		};
 
-		Thread t2 = new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				try {
-					pc.consume();
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		Thread t1 = new Thread(runnable);
+		Thread t2 = new Thread(runnable);
 
 		t1.start();
 		t2.start();
