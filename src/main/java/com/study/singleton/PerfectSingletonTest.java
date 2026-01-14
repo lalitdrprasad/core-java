@@ -47,7 +47,7 @@ class PerfectSingletonTest {
 		if (!isSignleton) {
 			System.out.println("Not a Singleton Class");
 		}
-		assertFalse(isSignleton);
+		assertTrue(isSignleton);
 		System.out.println("Total Instances: " + instanceList.size());
 		instanceList.forEach(System.out::println);
 
