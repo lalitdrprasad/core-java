@@ -1,7 +1,5 @@
-package practice;
+package com.study.practice;
 
-import java.util.Deque;
-import java.util.ArrayDeque;
 import java.util.Stack;
 
 public class BalancedParentheses {
@@ -26,9 +24,8 @@ public class BalancedParentheses {
             || (open == '[' && close == ']');
     }
 
-    // Small runnable main for quick manual testing
     public static void main(String[] args) {
-        String[] tests = {"()", "()[]{}", "(]", "([)]", "{[]}", "", null};
+        String[] tests = {"()", "()[]{}", "(]", "([)]", "{[]}","{{()[](){}}}", "", null};
         for (String t : tests) {
             System.out.printf("%s -> %s%n", t, isBalanced(t));
         }
