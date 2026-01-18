@@ -9,6 +9,7 @@ public class NonRepeatingChar {
         if (s == null || s.isEmpty()) {
             throw new IllegalArgumentException("Input string cannot be null or empty");
         }
+
         OptionalInt first = s.chars()
                 .filter(c -> s.indexOf(c) == s.lastIndexOf(c)).findFirst();
 
